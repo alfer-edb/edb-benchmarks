@@ -8,7 +8,7 @@ proc wait_to_complete {} {
 dbset db pg
 diset connection pg_host "{{ infra.servers.biganimal.tprocc.public_ip }}"
 diset connection pg_port "{{ infra.servers.biganimal.tprocc.port }}"
-diset connection instance {{ infra.servers.biganimal.tprocc.tags.dbname }}
+diset tpcc pg_dbase bench
 diset tpcc pg_defaultdbase "{{ infra.servers.biganimal.tprocc.username }}"
 diset tpcc pg_count_ware {{ tprocc_warehouse }}
 diset tpcc pg_num_vu 35

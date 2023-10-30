@@ -19,6 +19,7 @@ proc runtimer { seconds } {
 dbset db pg
 diset connection pg_host "{{ infra.servers.biganimal.tprocc.public_ip }}"
 diset connection pg_port "{{ infra.servers.biganimal.tprocc.port }}"
+diset tpcc pg_dbase bench
 diset tpcc pg_raiseerror true
 diset tpcc pg_defaultdbase "{{ infra.servers.biganimal.tprocc.username }}"
 diset tpcc pg_superuser "{{ infra.servers.biganimal.tprocc.username }}"
